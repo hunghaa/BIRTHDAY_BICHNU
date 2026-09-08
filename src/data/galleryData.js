@@ -32,7 +32,7 @@ export const galleryPhotos = [
     type: 'image',
     category: 'milestones',
     image: imgGradNu,
-    title: 'Chúc mừng đã bạn nhá',
+    title: 'Một ngày vui của bạn có tui',
     icon: 'workspace_premium',
   },
   {

@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { triggerHeartConfetti, triggerConfetti } from '../utils/confetti'
-import { musicBox } from '../utils/musicBox'
 import Icon from './Icon'
 
 export default function CakeSection() {
@@ -55,9 +54,6 @@ export default function CakeSection() {
     triggerConfetti()
     triggerHeartConfetti({ particleCount: 50 })
     playWishSparkleSound()
-
-    // Play sound_birthday.mp3
-    musicBox.start()
   }
 
   const relightCandles = () => {

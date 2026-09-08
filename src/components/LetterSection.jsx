@@ -102,9 +102,9 @@ export default function LetterSection() {
       {/* Letter Card (overflow-visible để không bị che sticker washi tape) */}
       <div className="relative bg-white rounded-xl md:rounded-3xl shadow-[0_20px_60px_-15px_rgba(219,39,119,0.18)] p-4 sm:p-8 md:p-12 overflow-visible border border-pink-200/50 mt-2 md:mt-4">
         {/* Top Washi Tape Sticker */}
-        <div className="absolute -top-3.5 md:-top-4 left-1/2 -translate-x-1/2 w-48 md:w-60 h-7 md:h-8 bg-[#ffd8e7] rotate-[-2deg] rounded-sm backdrop-blur-md shadow-md z-30 flex items-center justify-center border-t border-b border-pink-300/60 pointer-events-none">
-          <span className="text-[9px] md:text-[10px] uppercase tracking-widest text-[#76014e] font-black opacity-90">
-            GỬI TRỌN YÊU THƯƠNG • 08.09.2001
+        <div className="absolute -top-3.5 md:-top-4 left-1/2 -translate-x-1/2 px-5 sm:px-6 h-7 md:h-8 bg-[#ffd8e7] rotate-[-2deg] rounded-sm backdrop-blur-md shadow-md z-30 flex items-center justify-center border-t border-b border-pink-300/60 pointer-events-none whitespace-nowrap">
+          <span className="text-[9px] md:text-[10px] uppercase tracking-wider text-[#76014e] font-black opacity-90 leading-none">
+            WITH LOVE • 08.09.2001
           </span>
         </div>
 

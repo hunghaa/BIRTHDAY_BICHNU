@@ -280,11 +280,11 @@ export default function SecretEntrance({ onOpen }) {
             {/* Main CTA Button */}
             <button
               onClick={handleOpenSurprise}
-              className="shimmer-effect group relative w-full sm:w-auto px-8 py-3.5 rounded-full bg-gradient-to-r from-primary via-primary-container to-secondary text-white font-syne text-base sm:text-lg font-bold shadow-[0_12px_30px_rgba(219,39,119,0.38)] hover:shadow-[0_18px_40px_rgba(219,39,119,0.55)] hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer border border-white/40"
+              className="shimmer-effect group relative w-full sm:w-auto px-4 sm:px-8 py-3 sm:py-3.5 rounded-full bg-gradient-to-r from-primary via-primary-container to-secondary text-white font-syne text-xs sm:text-base font-bold shadow-[0_12px_30px_rgba(219,39,119,0.38)] hover:shadow-[0_18px_40px_rgba(219,39,119,0.55)] hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center gap-1.5 sm:gap-2 cursor-pointer border border-white/40 whitespace-nowrap"
               type="button"
             >
               <span>Chạm để mở quà sinh nhật</span>
-              <span className="text-2xl group-hover:rotate-12 transition-transform duration-300">
+              <span className="text-lg sm:text-2xl group-hover:rotate-12 transition-transform duration-300">
                 🎀
               </span>
             </button>
