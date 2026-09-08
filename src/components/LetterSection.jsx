@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { triggerHeartConfetti } from '../utils/confetti'
+import Icon from './Icon'
 
 const letterParagraphs = [
   {
@@ -110,9 +111,7 @@ export default function LetterSection() {
         {/* Vintage Postal Stamp - Responsive size */}
         <div className="absolute top-2 md:top-6 right-2 md:right-6 w-12 h-16 md:w-16 md:h-22 bg-[#fdeae8] rounded-md md:rounded-lg p-0.5 md:p-1.5 shadow-inner flex flex-col items-center justify-between pointer-events-none rotate-3 border md:border-2 border-dashed border-pink-300/70">
           <div className="w-full h-9 md:h-12 bg-gradient-to-tr from-pink-300 to-pink-400 rounded flex items-center justify-center shadow-sm">
-            <span className="material-symbols-outlined text-white text-base md:text-2xl animate-pulse">
-              favorite
-            </span>
+            <Icon name="favorite" className="w-5 h-5 md:w-6 md:h-6 text-white animate-pulse" />
           </div>
           <span className="text-[8px] md:text-[9px] text-[#755368] font-mono font-bold tracking-tighter">
             08.09.2001
@@ -122,9 +121,7 @@ export default function LetterSection() {
         {/* Letter Header */}
         <div className="flex flex-col gap-1 pt-2 md:pt-2 border-b pb-3 md:pb-5 border-pink-100 pr-14 md:pr-20">
           <div className="flex items-center gap-1.5 md:gap-2 text-primary font-syne text-base md:text-2xl font-bold">
-            <span className="material-symbols-outlined text-secondary text-lg md:text-2xl">
-              mail
-            </span>
+            <Icon name="mail" className="w-5 h-5 md:w-6 md:h-6 text-secondary" />
             <span>Thư gửi Bích Nụ</span>
           </div>
           <div className="flex items-center justify-between">

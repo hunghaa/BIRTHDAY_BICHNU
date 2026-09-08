@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import Icon from './Icon'
 
 export default function SecretEntrance({ onOpen }) {
   const [isOpen, setIsOpen] = useState(false)
@@ -261,9 +262,7 @@ export default function SecretEntrance({ onOpen }) {
 
             {/* Teaser Badge & Heading */}
             <div className="inline-flex items-center gap-1.5 px-4 py-1 rounded-full bg-[#f7e4e2] text-primary text-xs font-bold mb-3 border border-pink-200/40 shadow-sm">
-              <span className="material-symbols-outlined text-[16px] text-primary-container">
-                favorite
-              </span>
+              <Icon name="favorite" className="w-4 h-4 text-primary-container" />
               <span>Món quà đặc biệt dành tặng Bích Nụ ✨</span>
             </div>
 
@@ -292,9 +291,7 @@ export default function SecretEntrance({ onOpen }) {
 
             {/* Hint text */}
             <div className="mt-4 flex items-center justify-center gap-1.5 text-tertiary text-xs opacity-90 font-medium">
-              <span className="material-symbols-outlined text-[16px] animate-pulse">
-                volume_up
-              </span>
+              <Icon name="volume_up" className="w-4 h-4 animate-pulse" />
               <span>Bật âm thanh thiết bị để lắng nghe giai điệu sinh nhật nha ✨</span>
             </div>
           </div>

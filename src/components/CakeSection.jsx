@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { triggerHeartConfetti, triggerConfetti } from '../utils/confetti'
 import { musicBox } from '../utils/musicBox'
+import Icon from './Icon'
 
 export default function CakeSection() {
   const [candlesLit, setCandlesLit] = useState(true)
@@ -83,7 +84,7 @@ export default function CakeSection() {
         
         {/* Section Pill Badge */}
         <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#ffd8e7] text-[#3d0026] text-[11px] font-bold mb-2 backdrop-blur-sm border border-pink-200/80 shadow-xs">
-          <span className="material-symbols-outlined text-[14px] text-primary">magic_button</span>
+          <Icon name="magic_button" className="w-3.5 h-3.5 text-primary" />
           <span>Góc Ước Nguyện Tuổi 25</span>
         </div>
 
@@ -236,9 +237,7 @@ export default function CakeSection() {
               onClick={relightCandles}
               className="px-4 py-3 rounded-full bg-[#f7e4e2] text-primary hover:bg-pink-100 font-nunito text-xs font-bold border border-pink-200 shadow-sm active:scale-95 transition-all flex items-center justify-center gap-1.5 cursor-pointer"
             >
-              <span className="material-symbols-outlined text-[18px] text-amber-500">
-                local_fire_department
-              </span>
+              <Icon name="local_fire_department" className="w-4.5 h-4.5 text-amber-500" />
               <span>Thắp lại nến 🔥✨</span>
             </button>
           </div>

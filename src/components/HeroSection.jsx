@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { triggerHeartConfetti } from '../utils/confetti'
+import Icon from './Icon'
 
 export default function HeroSection() {
   const [candleLit, setCandleLit] = useState(true)
@@ -175,15 +176,17 @@ export default function HeroSection() {
 
       {/* Celebration Badge */}
       <div className="relative z-10 inline-flex items-center gap-1.5 px-3 md:px-4 py-1 md:py-1.5 rounded-full bg-[#f7e4e2]/90 text-primary shadow-[0_4px_16px_rgba(219,39,119,0.12)] backdrop-blur-md mb-3 md:mb-5 border border-pink-200/50">
-        <span className="material-symbols-outlined text-[14px] md:text-[16px] text-pink-600 animate-spin duration-3000">
-          auto_awesome
-        </span>
+        <Icon
+          name="auto_awesome"
+          className="w-3.5 h-3.5 md:w-4 md:h-4 text-pink-600 animate-spin duration-3000"
+        />
         <span className="text-[10px] md:text-xs tracking-wider uppercase font-semibold text-primary">
           08/09/2001 • Chúc Mừng Sinh Nhật Tuổi 25 ✨
         </span>
-        <span className="material-symbols-outlined text-[14px] md:text-[16px] text-pink-600">
-          cake
-        </span>
+        <Icon
+          name="cake"
+          className="w-3.5 h-3.5 md:w-4 md:h-4 text-pink-600"
+        />
       </div>
 
       {/* Main Title with Shimmering Gradient & Wave (Idea 3) */}

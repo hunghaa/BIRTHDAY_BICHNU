@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { musicBox } from '../utils/musicBox'
+import Icon from './Icon'
 
 export default function AudioPlayer() {
   const [audioState, setAudioState] = useState({
@@ -74,9 +75,10 @@ export default function AudioPlayer() {
             isMusicActive ? 'bg-primary' : 'bg-neutral-500'
           }`}
         >
-          <span className="material-symbols-outlined text-[12px]">
-            {isMusicActive ? 'volume_up' : 'volume_off'}
-          </span>
+          <Icon
+            name={isMusicActive ? 'volume_up' : 'volume_off'}
+            className="w-3 h-3 text-white"
+          />
         </div>
       </button>
     </div>

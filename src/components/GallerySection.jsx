@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 import { galleryPhotos } from '../data/galleryData'
+import Icon from './Icon'
 
 function VideoCard({ item, isPlaying, onTogglePlay, photoLikes, toggleLike }) {
   const videoRef = useRef(null)
@@ -59,9 +60,7 @@ function VideoCard({ item, isPlaying, onTogglePlay, photoLikes, toggleLike }) {
 
           {/* Badge top-right */}
           <div className="absolute top-2.5 right-2.5 px-2.5 py-1 rounded-full bg-black/65 backdrop-blur-sm text-white text-[11px] font-bold flex items-center gap-1 shadow-md z-10 pointer-events-none">
-            <span className="material-symbols-outlined text-sm text-pink-400">
-              {isPlaying ? 'graphic_eq' : 'smart_display'}
-            </span>
+            <Icon name={isPlaying ? 'graphic_eq' : 'smart_display'} className="w-3.5 h-3.5 text-pink-400" />
             <span>{isPlaying ? 'Đang phát' : 'Video Clip'}</span>
           </div>
 
@@ -72,9 +71,7 @@ function VideoCard({ item, isPlaying, onTogglePlay, photoLikes, toggleLike }) {
               className="absolute top-2.5 left-2.5 w-8 h-8 rounded-full bg-black/65 hover:bg-black/85 backdrop-blur-sm text-white flex items-center justify-center shadow-md z-10 transition-transform active:scale-90 cursor-pointer"
               title={isMuted ? 'Bật âm thanh' : 'Tắt âm thanh'}
             >
-              <span className="material-symbols-outlined text-base">
-                {isMuted ? 'volume_off' : 'volume_up'}
-              </span>
+              <Icon name={isMuted ? 'volume_off' : 'volume_up'} className="w-4 h-4" />
             </button>
           )}
 
@@ -84,7 +81,7 @@ function VideoCard({ item, isPlaying, onTogglePlay, photoLikes, toggleLike }) {
               <div className="relative flex items-center justify-center">
                 <span className="absolute w-16 h-16 rounded-full bg-pink-500/40 animate-ping" />
                 <div className="relative w-14 h-14 rounded-full bg-gradient-to-tr from-primary to-pink-400 text-white flex items-center justify-center shadow-lg shadow-pink-600/50 group-hover:scale-110 transition-transform">
-                  <span className="material-symbols-outlined text-3xl ml-0.5">play_arrow</span>
+                  <Icon name="play_arrow" className="w-8 h-8 ml-0.5 text-white" />
                 </div>
               </div>
               <span className="mt-3 px-3 py-1 rounded-full bg-black/60 backdrop-blur-xs text-white text-xs font-bold shadow-md tracking-wide">
@@ -97,7 +94,7 @@ function VideoCard({ item, isPlaying, onTogglePlay, photoLikes, toggleLike }) {
           {isPlaying && (
             <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
               <div className="w-12 h-12 rounded-full bg-black/60 backdrop-blur-xs text-white flex items-center justify-center shadow-lg">
-                <span className="material-symbols-outlined text-2xl">pause</span>
+                <Icon name="pause" className="w-6 h-6 text-white" />
               </div>
             </div>
           )}
@@ -122,9 +119,7 @@ function VideoCard({ item, isPlaying, onTogglePlay, photoLikes, toggleLike }) {
               className="flex items-center gap-1 text-primary hover:scale-110 active:scale-95 transition-transform shrink-0 px-2 py-1 rounded-full hover:bg-pink-50 cursor-pointer"
               title="Thả tim khoảnh khắc này"
             >
-              <span className="material-symbols-outlined text-[16px] md:text-[18px]">
-                {item.icon || 'favorite'}
-              </span>
+              <Icon name={item.icon || 'favorite'} className="w-4 h-4 md:w-4.5 md:h-4.5" />
               {photoLikes[item.id] ? (
                 <span className="text-[10px] font-bold">{photoLikes[item.id]}</span>
               ) : null}
@@ -162,7 +157,7 @@ export default function GallerySection() {
       {/* Section Heading */}
       <div className="flex flex-col items-center text-center mb-6 md:mb-10">
         <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#ffd8e7] text-[#3d0026] text-xs font-bold mb-2.5 border border-pink-200/70 shadow-xs">
-          <span className="material-symbols-outlined text-sm text-pink-600">photo_library</span>
+          <Icon name="photo_library" className="w-4 h-4 text-pink-600" />
           <span>Một vài tấm hình trong máy tui</span>
         </div>
       </div>
@@ -227,9 +222,7 @@ export default function GallerySection() {
                       className="flex items-center gap-1 text-primary hover:scale-110 active:scale-95 transition-transform shrink-0 px-2 py-1 rounded-full hover:bg-pink-50 cursor-pointer"
                       title="Thả tim khoảnh khắc này"
                     >
-                      <span className="material-symbols-outlined text-[16px] md:text-[18px]">
-                        {item.icon || 'favorite'}
-                      </span>
+                      <Icon name={item.icon || 'favorite'} className="w-4 h-4 md:w-4.5 md:h-4.5" />
                       {photoLikes[item.id] ? (
                         <span className="text-[10px] font-bold">{photoLikes[item.id]}</span>
                       ) : null}
