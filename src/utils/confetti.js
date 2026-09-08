@@ -22,13 +22,14 @@ export function triggerConfetti() {
   fire(0.1, { spread: 120, startVelocity: 45 })
 }
 
-export function triggerHeartConfetti() {
+export function triggerHeartConfetti(opts = {}) {
   confetti({
-    particleCount: 50,
-    spread: 70,
-    origin: { y: 0.75 },
+    particleCount: opts.particleCount || 50,
+    spread: opts.spread || 70,
+    origin: opts.origin || { y: 0.75 },
     shapes: ['star'],
-    colors: ['#ff69b4', '#ff1493', '#ffc0cb', '#ffd700', '#ba0060'],
+    colors: ['#ff69b4', '#ff1493', '#ffc0cb', '#ffd700', '#ba0060', '#fc79bd'],
+    ...opts,
   })
 }
 

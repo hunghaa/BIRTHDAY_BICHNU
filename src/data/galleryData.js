@@ -1,56 +1,142 @@
+import imgSchool from '../assets/hinh_nu/received_1012025869561619.jpeg'
+import imgGradNu from '../assets/hinh_nu/received_6927871720597107.jpeg'
+import imgGradHung from '../assets/hinh_nu/received_264544952917418.jpeg'
+import imgBobaSmile from '../assets/hinh_nu/received_1236636626542573.jpeg'
+import imgPlayful from '../assets/hinh_nu/received_1085876415748782.jpeg'
+import imgHighlands from '../assets/hinh_nu/received_1311443992800616.jpeg'
+import imgSelfie from '../assets/hinh_nu/received_311458955120173.jpeg'
+import imgFunny from '../assets/hinh_nu/received_164842431524574.jpeg'
+import imgLasuTea from '../assets/hinh_nu/received_1179506033412038.jpeg'
+import imgVideoCall from '../assets/hinh_nu/received_916866409194388.webp'
+import videoClip1 from '../assets/hinh_nu/received_1928680484217537.mp4'
+import videoClip2 from '../assets/hinh_nu/received_917285090082888.mp4'
+
+export const galleryCategories = [
+  { id: 'all', label: 'Tất cả', icon: 'auto_awesome' },
+  { id: 'milestones', label: 'Cột mốc', icon: 'school' },
+  { id: 'moments', label: 'Đời thường', icon: 'favorite' },
+  { id: 'videos', label: 'Video Clips', icon: 'smart_display' },
+]
+
 export const galleryPhotos = [
   {
     id: 1,
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuDrIWB_53GRefrNX-GnKvOIRiG5_GjLRTX931YeF1ATWXlLHfrYgO8yhouicjN1EmsOuBu7oYDnzij7N8ghECutPsZoJQIGcJ5h186kklAStZ84Ty6Va_M0bMNt8E-d4Ql2QLNtroOgY0zXBJ-_dirv23T2OOcJCLg_JTgzwELRzX4Nm415wJmYEi3CWaSKyE9aaQZzpELe99vv6aq4za0SAr2AAHLTKYc90Wx8hJ4KIjhKyEDzJXps',
-    title: 'Bich Nu • Classroom Radiance',
-    icon: 'favorite',
-    tag: 'Teacher Glow',
-    wish: "Bich Nu's radiant smile in the classroom illuminates her students' passion for learning every single day!",
+    type: 'image',
+    category: 'milestones',
+    image: imgSchool,
+    title: 'Thời Học Trò • Khăn Quàng Đỏ',
+    icon: 'school',
+    tag: 'Tuổi Thơ Ngây Ngô',
+    wish: 'Ngày ấy hai đứa còn đeo khăn quàng đỏ ngây ngô dưới mái trường, giờ cô bé Cẩm Nguyệt năm nào đã trở thành cô giáo tiếng Anh 25 tuổi thật xinh đẹp và tài giỏi!',
   },
   {
     id: 2,
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuDFWreHUUyqs4BkMVvczqvefLJT-xvQ9JVHqukpzE4EK-mZXjRaGOGZaVCDTFX5ZTfU1nVwSweDXNskfH2aZfUygHeR_yNY7nWdg_fUT1vYtdHElBBdVHC_4uCx5N6X22G4stmax11fnNZoWK74gPj9MRVDisSJtXuB49yFIkRipmv865wtUqgwGsp1UptBqeTghqbcynNna_W-ig2VVSdewnBgQD_QTQ0ESdquqycJuw54ILnsxgKx',
-    title: 'Warm Autumn • Cafe Serenity',
-    icon: 'local_cafe',
-    tag: 'Cozy Afternoon',
-    wish: 'Peaceful autumn afternoons with warm coffee, gentle and sweet just like Bich Nu herself.',
+    type: 'image',
+    category: 'milestones',
+    image: imgGradNu,
+    title: 'Tốt Nghiệp Tôn Đức Thắng • TDTU',
+    icon: 'workspace_premium',
+    tag: 'Cử Nhân Bích Nụ',
+    wish: 'Khoảnh khắc rạng rỡ của Bích Nụ trong ngày nhận bằng tốt nghiệp TDTU, đón nhận những đóa hoa tươi thắm cùng tình cảm chúc mừng từ mọi người.',
   },
   {
     id: 3,
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuBaV5tgZVTR6xibPErcIMi0-v6pWbBOsCaaoFjvbIJ3bYACyEUYVbIc4daTnCM32i8w25qX77rRPYz3ewV6BZavGFQBTMOVosElThApDmDwyGpqaeuL3bncnEOI3c5BJ3GAswlIQeY2PTFPnEQzAM86XQWcmW1Hz8fntulsBv_ZISlJAg53tacbpaKjux1KEjvaB69K8enyawdKke1w5RRfMf_d4w0TaiKN2WiqXboY0S9303irCc3M',
-    title: 'Birthday Wish • Sweet Milestone',
-    icon: 'cake',
-    tag: 'Age 24',
-    wish: 'A radiant 24th year, welcoming endless luck, boundless joy, and everlasting smiles.',
+    type: 'image',
+    category: 'milestones',
+    image: imgGradHung,
+    title: 'Tốt Nghiệp UIT • Đồng Hành Cùng Hùng',
+    icon: 'emoji_events',
+    tag: 'Tri Kỷ Đồng Hành',
+    wish: 'Ngày Minh Hùng tốt nghiệp UIT, Bích Nụ xách hoa hướng dương tới chúc mừng và cùng nâng tấm bằng khen đầy tự hào, chia ngọt sẻ bùi cùng nhau!',
   },
   {
     id: 4,
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuDGXS1jIAt-tb13t-mWP_O8ULbGOZzrlwDTqSvStR8dnoTu9xNoiX125Udw7c8l_eBtQjrAgsrhMoafGPAb5gJx2mhuQjFBLtaH4EF74kuBpNUHdxJi8tZz9o0JoCJWRFTQm84g6zlf8i5L5BGTnWIq2NZ0l6ZDmjbRTKeg0n_r6kIQifBUzntBaGtrBvLSrQQGeU6KgXog3ERktP5Na1D51n3OarNL-btzvJJJF7qkqfoT2nf930sl',
-    title: 'Mentorship • Heartfelt Wisdom',
-    icon: 'auto_awesome',
-    tag: 'Inspiration',
-    wish: 'Devotion, kindness, and vibrant passion that serve as an inspiring beacon for every generation.',
+    type: 'image',
+    category: 'moments',
+    image: imgBobaSmile,
+    title: 'Trà Sữa & Nụ Cười Tỏa Nắng',
+    icon: 'local_cafe',
+    tag: 'Ngọt Ngào & Tươi Tắn',
+    wish: 'Uống trà sữa thì ngọt ngào, nhưng nụ cười tươi tắn của cô giáo Bích Nụ lúc nào cũng làm bừng sáng cả không gian.',
   },
   {
     id: 5,
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuBLhYIfArPI-vwkTdUQF89xkd7oz-H_r5Fk1TWpGN4yjJA_Ul66vUn3Em6Tdxm3n2A-EVLujUOdT_JKzZ9z3ZRoagMUhaUSiZvIIrDeXBlfnKg9Ns9AHFoaZio6t5GHtCNrhkInF9XRqOpsSRgL3Lxkdg2xUDMU2Qnh9sYhxhpmtn9hBqaA7ggmKm8BGY-6evIeM_mFfGFGaIZvSUwvCuvg9yPnEVa4ZDy_YCxvL3j8znPd-NfZHqpA',
-    title: 'Friends & Blooms • Pure Joy',
-    icon: 'filter_vintage',
-    tag: 'Sweet Moments',
-    wish: 'Sweet fragrant blooms and pure, cheerful laughter shared alongside dearest friends.',
+    type: 'image',
+    category: 'moments',
+    image: imgPlayful,
+    title: 'Alo Nghe Nè • Năng Lượng Rực Rỡ',
+    icon: 'sentiment_very_satisfied',
+    tag: 'Nhí Nhảnh & Yêu Đời',
+    wish: 'Luôn tự tin, nhí nhảnh và tràn đầy năng lượng tích cực! Chúc Bích Nụ tuổi 25 lúc nào cũng cười thả ga và yêu đời như vầy nha.',
   },
   {
     id: 6,
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuDKr8GzKIx52FqNQ5R86cHtqBzK46x0ksubEUSTCfSd6VMybVdIcG0DXuC1IqhRUXEu44tC2JBiAr2vSrC1bWS_oqwvhD1od4iNtwFKIqA6YYrhvikOg9bGAVeRY9t-T0ZatHGvIfnAMF6tXClF0UwNTpX1JJb0TkKblV9sSi0L2b_DpTckGaL30QA7X0v20LVMhyLx-bzkUFa9szwGrglREpm02Piubu2M-NneBE04BRbiNdYfbZYM',
-    title: 'Wanderlust • Golden Horizons',
-    icon: 'photo_camera',
-    tag: 'New Horizons',
-    wish: 'Wishing Bich Nu to explore enchanting new horizons, free, beautiful, and forever radiant!',
+    type: 'image',
+    category: 'moments',
+    image: imgHighlands,
+    title: 'Highlands Coffee & Bánh Chewy',
+    icon: 'bakery_dining',
+    tag: 'Cà Phê & Bánh Ngọt',
+    wish: 'Những buổi tối cà phê chuyện trò, nhâm nhi bánh su Chewy Junior thơm lừng và nói đủ thứ chuyện trên đời.',
+  },
+  {
+    id: 7,
+    type: 'image',
+    category: 'moments',
+    image: imgSelfie,
+    title: 'Đôi Bạn Cùng Tiến • Kính Tri Thức',
+    icon: 'diversity_1',
+    tag: 'Đôi Bạn Tri Thức',
+    wish: 'Hai đứa đeo kính tri thức xúng xính đồ đẹp. Không cần phải gặp nhau quá nhiều hay nói chuyện suốt, nhưng hễ gặp là rôm rả như chưa từng xa cách!',
+  },
+  {
+    id: 8,
+    type: 'image',
+    category: 'moments',
+    image: imgFunny,
+    title: 'Khoảnh Khắc Lầy Lội • Cười Nghiêng Ngả',
+    icon: 'mood',
+    tag: 'Troll Nhau Siêu Lầy',
+    wish: 'Chơi với nhau lâu năm là phải có những pha troll nhau lầy lội cười nghiêng ngả như vầy mới đúng chất bạn thân lâu năm =))',
+  },
+  {
+    id: 9,
+    type: 'image',
+    category: 'moments',
+    image: imgLasuTea,
+    title: 'LASU Oolong • Góc Trà Sữa Quen Thuộc',
+    icon: 'emoji_food_beverage',
+    tag: 'Hương Vị Kỷ Niệm',
+    wish: 'Những ly trà sữa Oolong LASU quen thuộc, gắn liền với biết bao câu chuyện vui buồn từ thời sinh viên đến khi đi làm.',
+  },
+  {
+    id: 10,
+    type: 'image',
+    category: 'moments',
+    image: imgVideoCall,
+    title: 'Cuộc Gọi Đêm • Nụ Cười Ấm Áp',
+    icon: 'videocam',
+    tag: 'Cuộc Gọi Đêm',
+    wish: 'Dù sau một ngày dài mệt mỏi, khi bật màn hình lên vẫn luôn là nụ cười ấm áp, gần gũi và dễ thương quen thuộc của Bích Nụ.',
+  },
+  {
+    id: 11,
+    type: 'video',
+    category: 'videos',
+    image: videoClip1,
+    title: 'Thước Phim Rực Rỡ • Tuổi 25',
+    icon: 'smart_display',
+    tag: 'Video Clip Sống Động',
+    wish: 'Một thước phim ngắn ghi lại thần thái đáng yêu, tự nhiên và tràn ngập sức sống của cô giáo Bích Nụ ngoài đời thực! ✨',
+  },
+  {
+    id: 12,
+    type: 'video',
+    category: 'videos',
+    image: videoClip2,
+    title: 'Chuyển Động Kỷ Niệm • Tuổi Trẻ',
+    icon: 'play_circle',
+    tag: 'Khoảnh Khắc Đáng Yêu',
+    wish: 'Lưu giữ những chuyển động thanh xuân rạng rỡ tuổi 25 — chúc Bích Nụ luôn vui vẻ, nhẹ đầu và làm gì cũng suôn sẻ!',
   },
 ]

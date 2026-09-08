@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import Navbar from './components/Navbar'
 import HeroSection from './components/HeroSection'
+import CakeSection from './components/CakeSection'
 import LetterSection from './components/LetterSection'
 import GallerySection from './components/GallerySection'
 import Footer from './components/Footer'
@@ -17,6 +18,7 @@ export default function App() {
   useEffect(() => {
     const handleScroll = () => {
       const celebrationEl = document.getElementById('celebration')
+      const cakeEl = document.getElementById('interactive-cake')
       const letterEl = document.getElementById('heartfelt-note')
       const galleryEl = document.getElementById('gallery')
 
@@ -26,6 +28,8 @@ export default function App() {
         setActiveSection('gallery')
       } else if (letterEl && scrollPos >= letterEl.offsetTop) {
         setActiveSection('heartfelt-note')
+      } else if (cakeEl && scrollPos >= cakeEl.offsetTop) {
+        setActiveSection('interactive-cake')
       } else {
         setActiveSection('celebration')
       }
@@ -35,19 +39,23 @@ export default function App() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // Lightbox Next/Prev Handlers
+  // Lightbox Next/Prev Handlers (photos only)
+  const imagePhotos = galleryPhotos.filter((p) => p.type !== 'video')
+
   const handleNextPhoto = () => {
     if (!selectedPhoto) return
-    const currentIndex = galleryPhotos.findIndex((p) => p.id === selectedPhoto.id)
-    const nextIndex = (currentIndex + 1) % galleryPhotos.length
-    setSelectedPhoto(galleryPhotos[nextIndex])
+    const currentIndex = imagePhotos.findIndex((p) => p.id === selectedPhoto.id)
+    if (currentIndex === -1) return
+    const nextIndex = (currentIndex + 1) % imagePhotos.length
+    setSelectedPhoto(imagePhotos[nextIndex])
   }
 
   const handlePrevPhoto = () => {
     if (!selectedPhoto) return
-    const currentIndex = galleryPhotos.findIndex((p) => p.id === selectedPhoto.id)
-    const prevIndex = (currentIndex - 1 + galleryPhotos.length) % galleryPhotos.length
-    setSelectedPhoto(galleryPhotos[prevIndex])
+    const currentIndex = imagePhotos.findIndex((p) => p.id === selectedPhoto.id)
+    if (currentIndex === -1) return
+    const prevIndex = (currentIndex - 1 + imagePhotos.length) % imagePhotos.length
+    setSelectedPhoto(imagePhotos[prevIndex])
   }
 
   const handleOpenSurprise = () => {
@@ -73,6 +81,7 @@ export default function App() {
       {/* Main Content Sections */}
       <main className="relative z-10 w-full pt-16 md:pt-20">
         <HeroSection />
+        <CakeSection />
         <LetterSection />
         <GallerySection onSelectPhoto={(photo) => setSelectedPhoto(photo)} />
       </main>

@@ -5,19 +5,19 @@ const letterParagraphs = [
   {
     id: 1,
     isSalutation: true,
-    text: 'Dearest Bich Nu,',
+    text: 'Bích Nụ ơi,',
   },
   {
     id: 2,
-    text: 'Happy 24th Birthday! Today is a celebration of the wonderful, kindhearted, and brilliant soul that you are. Watching your endless devotion and vibrant passion as an English teacher has always been an inspiration. You don’t simply teach lessons; you infuse courage, joy, and gentle optimism into every single classroom you step into.',
+    text: 'Tui Hùng nè =)), nhân dịp sinh nhật tuổi 25, tui chúc cho Bích Nụ tuổi mới vui vẻ hơn, nhẹ đầu hơn, làm gì cũng được suôn sẻ hơn nha. Mong là Nụ luôn giữ được tinh thần tích cực và dễ thương của mình. Nói chung là mong Bích Nụ tuổi mới vẫn là Bích Nụ thôi. Làm cô giáo tiếng Anh thì cứ ngày càng xịn hơn, dạy học vui hơn, học trò thương hơn và đồng nghiệp xung quanh cũng thân thiện hơn, và body cũng bốc lửa hơn nữa.',
   },
   {
     id: 3,
-    text: 'Your sparkling smile has the rare power to illuminate even the quietest rooms. Through every challenge and milestone, you carry yourself with unwavering grace, genuine warmth, and a heartfelt laugh that warms everyone lucky enough to know you.',
+    text: 'Với thật ra chơi với nhau cũng lâu rồi, nhưng mà nhìn lại trong điện thoại Minh Hùng thì hình đi chơi chung hay mấy lúc gặp nhau cũng không có nhiều. Chắc cũng vì vậy mà tui thấy cũng hay. Không cần phải hiểu nhau quá sâu hay lúc nào cũng nói chuyện nhiều, vậy mà vẫn giữ được mối quan hệ tới giờ. Xin lỗi Nụ vì nhiều cái tui làm Nụ chưa vui, đừng để bụng tui nhe, hehe, cám ơn Bích Nụ vì đã làm bạn với tui đến giờ.',
   },
   {
     id: 4,
-    text: 'As you enter this magical 24th year of your life, I wish you countless sunlit mornings, peaceful cafe afternoons, exciting adventures around the world, and the fulfillment of every quiet dream you hold close to your heart. May happiness accompany you wherever you go, and may your days always be filled with love and sweet wonder.',
+    text: 'Mong sẽ sớm lên được kèo cùng Bích Nụ. Thôi nói cũng dài rồi, quan trọng là hôm nay vui nha Bích Nụ 🎂💖',
   },
 ]
 
@@ -128,10 +128,7 @@ export default function LetterSection() {
             <span>Letter to Bich Nu</span>
           </div>
           <div className="flex items-center justify-between">
-            <span className="text-xs md:text-sm text-tertiary font-semibold">
-              Nguyen Thi Cam Nguyet (Our Brightest Sunshine)
-            </span>
-
+           
             {/* Quick Action Toggle */}
             {!isTypingComplete ? (
               <button
@@ -160,25 +157,27 @@ export default function LetterSection() {
           {letterParagraphs.map((para, pIdx) => {
             if (pIdx < currentParaIndex) {
               return para.isSalutation ? (
-                <p key={para.id} className="font-syne text-base md:text-xl text-primary font-bold">
+                <p key={para.id} className="font-nunito text-lg md:text-2xl text-primary font-extrabold tracking-tight">
                   {para.text}
                 </p>
               ) : (
-                <p key={para.id}>{para.text}</p>
+                <p key={para.id} className="font-nunito text-sm md:text-base text-[#4a3439] leading-relaxed">
+                  {para.text}
+                </p>
               )
             }
 
             if (pIdx === currentParaIndex) {
               const visibleSubstring = para.text.slice(0, currentCharIndex)
               return para.isSalutation ? (
-                <p key={para.id} className="font-syne text-base md:text-xl text-primary font-bold">
+                <p key={para.id} className="font-nunito text-lg md:text-2xl text-primary font-extrabold tracking-tight">
                   {visibleSubstring}
                   {!isTypingComplete && (
                     <span className="inline-block w-1.5 md:w-2 h-4 md:h-5 bg-pink-500 ml-1 animate-pulse rounded-xs align-middle" />
                   )}
                 </p>
               ) : (
-                <p key={para.id}>
+                <p key={para.id} className="font-nunito text-sm md:text-base text-[#4a3439] leading-relaxed">
                   {visibleSubstring}
                   {!isTypingComplete && (
                     <span className="inline-block w-1.5 md:w-2 h-4 md:h-5 bg-pink-500 ml-1 animate-pulse rounded-xs align-middle" />
@@ -198,11 +197,11 @@ export default function LetterSection() {
                 : 'opacity-0 translate-y-3 pointer-events-none'
             }`}
           >
-            <p className="font-syne text-sm md:text-base text-secondary font-bold">
-              With all my heartfelt love and deepest admiration,
+            <p className="font-nunito text-sm md:text-base text-secondary font-bold">
+              Chúc mừng sinh nhật Bích Nụ!
             </p>
-            <p className="text-xs md:text-sm text-primary font-semibold flex items-center gap-1 mt-0.5">
-              Forever cheering for you, always and always! 🌸💖
+            <p className="font-nunito text-xs md:text-sm text-primary font-semibold flex items-center gap-1 mt-0.5">
+              Từ Minh Hùng 🌸✨
             </p>
           </div>
         </div>

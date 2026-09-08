@@ -59,7 +59,7 @@ export default function Navbar({ activeSection }) {
         {/* Desktop Nav Links */}
         <nav className="hidden md:flex items-center gap-1.5 p-1 rounded-full bg-[#fff0ef]/80 backdrop-blur-md border border-pink-100/80">
           <a
-            className={`px-4 py-1.5 rounded-full text-sm font-semibold transition-all duration-300 ${
+            className={`px-3.5 py-1.5 rounded-full text-sm font-semibold transition-all duration-300 ${
               activeSection === 'celebration'
                 ? 'bg-white text-primary shadow-sm'
                 : 'text-[#594047] hover:text-primary hover:bg-white/60'
@@ -68,8 +68,9 @@ export default function Navbar({ activeSection }) {
           >
             Celebration
           </a>
+        
           <a
-            className={`px-4 py-1.5 rounded-full text-sm font-semibold transition-all duration-300 ${
+            className={`px-3.5 py-1.5 rounded-full text-sm font-semibold transition-all duration-300 ${
               activeSection === 'heartfelt-note'
                 ? 'bg-white text-primary shadow-sm'
                 : 'text-[#594047] hover:text-primary hover:bg-white/60'
@@ -79,7 +80,7 @@ export default function Navbar({ activeSection }) {
             Heartfelt Note
           </a>
           <a
-            className={`px-4 py-1.5 rounded-full text-sm font-semibold transition-all duration-300 ${
+            className={`px-3.5 py-1.5 rounded-full text-sm font-semibold transition-all duration-300 ${
               activeSection === 'gallery'
                 ? 'bg-white text-primary shadow-sm'
                 : 'text-[#594047] hover:text-primary hover:bg-white/60'
@@ -92,10 +93,11 @@ export default function Navbar({ activeSection }) {
 
         {/* Header Right Controls */}
         <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
-          {/* Mobile Only: 2 clean pills exactly as in stitch mobile code */}
+          {/* Mobile Only: 3 compact pills matching template */}
           <div className="flex md:hidden items-center gap-1">
+           
             <a
-              className="px-2 py-1 rounded-full bg-[#fff0ef] text-secondary text-xs font-bold hover:text-primary transition-all flex items-center gap-1 border border-pink-100/80 active:scale-95"
+              className="px-2 py-1 rounded-full bg-[#fff0ef] text-secondary text-xs font-bold hover:text-primary transition-all flex items-center gap-0.5 border border-pink-100/80 active:scale-95"
               href="#heartfelt-note"
             >
               <span className="material-symbols-outlined text-[13px] text-primary-container">
@@ -105,7 +107,7 @@ export default function Navbar({ activeSection }) {
             </a>
 
             <a
-              className="px-2 py-1 rounded-full bg-[#fff0ef] text-secondary text-xs font-bold hover:text-primary transition-all flex items-center gap-1 border border-pink-100/80 active:scale-95"
+              className="px-2 py-1 rounded-full bg-[#fff0ef] text-secondary text-xs font-bold hover:text-primary transition-all flex items-center gap-0.5 border border-pink-100/80 active:scale-95"
               href="#gallery"
             >
               <span className="material-symbols-outlined text-[13px] text-primary-container">
