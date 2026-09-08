@@ -244,7 +244,7 @@ export default function SecretEntrance({ onOpen }) {
             {/* Delicate Top Ribbon Tag */}
             <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-primary-container via-secondary to-primary text-white font-nunito uppercase tracking-widest text-[11px] font-bold shadow-md flex items-center gap-1.5 border border-white/50 whitespace-nowrap">
               <span className="text-xs">🎀</span>
-              <span>Birthday Surprise Gate</span>
+              <span>Hộp Quà Sinh Nhật</span>
               <span className="text-xs">🎀</span>
             </div>
 
@@ -264,19 +264,18 @@ export default function SecretEntrance({ onOpen }) {
               <span className="material-symbols-outlined text-[16px] text-primary-container">
                 favorite
               </span>
-              <span>A special delivery for Bich Nu ✨</span>
+              <span>Món quà đặc biệt dành tặng Bích Nụ ✨</span>
             </div>
 
             <h2 className="font-syne text-2xl sm:text-4xl text-[#231918] font-extrabold tracking-tight mb-2">
-              Someone Made This <br className="hidden sm:inline" />
+              Có một bất ngờ nhỏ <br className="hidden sm:inline" />
               <span className="bg-gradient-to-r from-primary via-primary-container to-secondary bg-clip-text text-transparent">
-                Just For You!
+                Dành Riêng Cho Bạn!
               </span>
             </h2>
 
             <p className="text-sm sm:text-base text-[#594047] max-w-sm mb-6 leading-relaxed">
-              A sparkling wonderland crafted with heartfelt memories, joyful smiles, and boundless
-              warmth for Nguyen Thi Cam Nguyet.
+              Một góc nhỏ ngập tràn kỷ niệm, niềm vui và những lời chúc ấm áp nhất gửi đến Nguyễn Thị Cẩm Nguyệt.
             </p>
 
             {/* Main CTA Button */}
@@ -285,7 +284,7 @@ export default function SecretEntrance({ onOpen }) {
               className="shimmer-effect group relative w-full sm:w-auto px-8 py-3.5 rounded-full bg-gradient-to-r from-primary via-primary-container to-secondary text-white font-syne text-base sm:text-lg font-bold shadow-[0_12px_30px_rgba(219,39,119,0.38)] hover:shadow-[0_18px_40px_rgba(219,39,119,0.55)] hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer border border-white/40"
               type="button"
             >
-              <span>Tap to open your surprise</span>
+              <span>Chạm để mở quà sinh nhật</span>
               <span className="text-2xl group-hover:rotate-12 transition-transform duration-300">
                 🎀
               </span>
@@ -296,7 +295,7 @@ export default function SecretEntrance({ onOpen }) {
               <span className="material-symbols-outlined text-[16px] animate-pulse">
                 volume_up
               </span>
-              <span>Turn on your volume &amp; click to unwrap your birthday magic ✨</span>
+              <span>Bật âm thanh thiết bị để lắng nghe giai điệu sinh nhật nha ✨</span>
             </div>
           </div>
         </div>

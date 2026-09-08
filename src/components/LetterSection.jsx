@@ -13,7 +13,7 @@ const letterParagraphs = [
   },
   {
     id: 3,
-    text: 'Với thật ra chơi với nhau cũng lâu rồi, nhưng mà nhìn lại trong điện thoại Minh Hùng thì hình đi chơi chung hay mấy lúc gặp nhau cũng không có nhiều. Chắc cũng vì vậy mà tui thấy cũng hay. Không cần phải hiểu nhau quá sâu hay lúc nào cũng nói chuyện nhiều, vậy mà vẫn giữ được mối quan hệ tới giờ. Xin lỗi Nụ vì nhiều cái tui làm Nụ chưa vui, đừng để bụng tui nhe, hehe, cám ơn Bích Nụ vì đã làm bạn với tui đến giờ.',
+    text: 'Với thật ra chơi với nhau cũng lâu rồi, nhưng mà nhìn lại trong điện thoại Minh Hùng thì hình đi chơi chung hay mấy lúc gặp nhau cũng không có nhiều. Chắc cũng vì vậy mà tui thấy cũng hay. Không cần phải hiểu nhau quá sâu hay lúc nào cũng nói chuyện nhiều, vậy mà vẫn giữ được mối quan hệ tới giờ. Xin lỗi Nụ vì nhiều cái tui làm Nụ chưa vui, đừng để bụng tui nhe, hehe, tự dưng cái thèm bánh tráng nướng, chuối rim đường quá =)).',
   },
   {
     id: 4,
@@ -101,9 +101,9 @@ export default function LetterSection() {
       {/* Letter Card (overflow-visible để không bị che sticker washi tape) */}
       <div className="relative bg-white rounded-xl md:rounded-3xl shadow-[0_20px_60px_-15px_rgba(219,39,119,0.18)] p-4 sm:p-8 md:p-12 overflow-visible border border-pink-200/50 mt-2 md:mt-4">
         {/* Top Washi Tape Sticker */}
-        <div className="absolute -top-3.5 md:-top-4 left-1/2 -translate-x-1/2 w-40 md:w-52 h-7 md:h-8 bg-[#ffd8e7] rotate-[-2deg] rounded-sm backdrop-blur-md shadow-md z-30 flex items-center justify-center border-t border-b border-pink-300/60 pointer-events-none">
+        <div className="absolute -top-3.5 md:-top-4 left-1/2 -translate-x-1/2 w-48 md:w-60 h-7 md:h-8 bg-[#ffd8e7] rotate-[-2deg] rounded-sm backdrop-blur-md shadow-md z-30 flex items-center justify-center border-t border-b border-pink-300/60 pointer-events-none">
           <span className="text-[9px] md:text-[10px] uppercase tracking-widest text-[#76014e] font-black opacity-90">
-            WITH LOVE • CHERISHED
+            GỬI TRỌN YÊU THƯƠNG • 08.09.2001
           </span>
         </div>
 
@@ -125,7 +125,7 @@ export default function LetterSection() {
             <span className="material-symbols-outlined text-secondary text-lg md:text-2xl">
               mail
             </span>
-            <span>Letter to Bich Nu</span>
+            <span>Thư gửi Bích Nụ</span>
           </div>
           <div className="flex items-center justify-between">
            
@@ -134,18 +134,18 @@ export default function LetterSection() {
               <button
                 onClick={handleShowAll}
                 className="hidden sm:inline-flex items-center gap-1 text-[11px] text-secondary hover:text-primary font-bold px-2.5 py-0.5 rounded-full bg-pink-50 hover:bg-pink-100 transition-all border border-pink-200"
-                title="Show full letter immediately"
+                title="Xem toàn bộ thư ngay"
               >
-                <span>Fast Forward</span>
+                <span>Xem nhanh</span>
                 <span>⏩</span>
               </button>
             ) : (
               <button
                 onClick={handleReplayTyping}
                 className="hidden sm:inline-flex items-center gap-1 text-[11px] text-secondary hover:text-primary font-bold px-2.5 py-0.5 rounded-full bg-pink-50 hover:bg-pink-100 transition-all border border-pink-200"
-                title="Watch letter write again"
+                title="Xem lại từng nét chữ"
               >
-                <span>Replay Writing</span>
+                <span>Xem lại lúc viết</span>
                 <span>✍️</span>
               </button>
             )}

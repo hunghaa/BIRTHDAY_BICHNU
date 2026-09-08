@@ -6,6 +6,7 @@ import LetterSection from './components/LetterSection'
 import GallerySection from './components/GallerySection'
 import Footer from './components/Footer'
 import SecretEntrance from './components/SecretEntrance'
+import AudioPlayer from './components/AudioPlayer'
 import { musicBox } from './utils/musicBox'
 
 export default function App() {
@@ -66,6 +67,9 @@ export default function App() {
 
       {/* Footer */}
       <Footer />
+
+      {/* Floating Audio Controller (Volume Slider & Instant Mute) */}
+      <AudioPlayer />
     </div>
   )
 }

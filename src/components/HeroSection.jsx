@@ -86,31 +86,31 @@ export default function HeroSection() {
   const stats = [
     {
       value: '25',
-      label: 'Sunlit Years',
+      label: 'Tuổi Mới',
       color: 'text-primary',
       icon: 'sparkles',
-      detail: 'A radiant silver jubilee! ✨',
+      detail: 'Tuổi 25 rạng rỡ ✨',
     },
     {
-      value: 'Sept 8',
-      label: 'Golden Birthday',
+      value: '08/09',
+      label: 'Sinh Nhật',
       color: 'text-primary-container',
       icon: 'cake',
-      detail: 'Day of light & beauty 🎂',
+      detail: 'Ngày ngập tràn niềm vui 🎂',
     },
     {
       value: `${1000 + extraSmiles}+`,
-      label: 'Smiles Shared',
+      label: 'Nụ Cười',
       color: 'text-secondary',
       icon: 'favorite',
-      detail: 'Tap to add your smile! ❤️',
+      detail: 'Chạm để gửi tim! ❤️',
     },
     {
       value: '∞',
-      label: 'Classroom Warmth',
+      label: 'Hạnh Phúc',
       color: 'text-primary',
       icon: 'all_inclusive',
-      detail: 'Endless inspiration 💫',
+      detail: 'Luôn vui vẻ 💫',
     },
   ]
 
@@ -179,7 +179,7 @@ export default function HeroSection() {
           auto_awesome
         </span>
         <span className="text-[10px] md:text-xs tracking-wider uppercase font-semibold text-primary">
-          Sept 8, 2001 • Celebrating 25 Radiant Years
+          08/09/2001 • Chúc Mừng Sinh Nhật Tuổi 25 ✨
         </span>
         <span className="material-symbols-outlined text-[14px] md:text-[16px] text-pink-600">
           cake
@@ -190,14 +190,14 @@ export default function HeroSection() {
       <h1 className="relative z-10 font-syne text-[1.875rem] sm:text-4xl md:text-6xl lg:text-[4.5rem] font-extrabold tracking-tight text-[#231918] max-w-4xl mx-auto drop-shadow-sm leading-[1.15] px-1 md:px-2">
         Happy Birthday <br className="sm:hidden" />
         <span className="shimmer-text bg-gradient-to-r from-primary via-[#fc79bd] via-[#ffd8e7] via-[#db2777] to-primary bg-clip-text text-transparent underline decoration-pink-300/80 decoration-wavy decoration-2 md:decoration-4">
-          Bich Nu
+          Bích Nụ
         </span>{' '}
         🎂
       </h1>
 
       {/* Subtitle / Bio note */}
       <p className="relative z-10 mt-3 md:mt-4 text-sm md:text-lg text-[#594047] max-w-2xl md:max-w-3xl mx-auto leading-relaxed px-2 md:px-3">
-        Dedicated to <strong className="text-primary font-semibold">Bich Nu</strong> (Nguyen Thi Cam Nguyet • September 8, 2001) — our most radiant, passionate, and inspiring English teacher who turns every single day into a joyful celebration of learning, laughter, and endless light.
+        Dành tặng <strong className="text-primary font-semibold">Bích Nụ</strong> (Cẩm Nguyệt • 08/09/2001) — một góc nhỏ lưu giữ những kỷ niệm đẹp và gửi gắm những lời chúc tuổi 25 thật nhiều niềm vui và luôn rạng rỡ hạnh phúc!
       </p>
 
       {/* 4 Interactive Stat Cards (Idea 5: Micro-interactions & animations) */}
@@ -220,7 +220,7 @@ export default function HeroSection() {
               {isSmiles && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-2.5 py-0.5 rounded-full bg-gradient-to-r from-pink-500 to-rose-400 text-white text-[9px] md:text-[10px] font-extrabold shadow-[0_3px_10px_rgba(219,39,119,0.35)] flex items-center gap-1 whitespace-nowrap animate-pulse">
                   <span>💖</span>
-                  <span>Tap Me!</span>
+                  <span>Thả tim nè!</span>
                 </div>
               )}
 
@@ -251,7 +251,7 @@ export default function HeroSection() {
               {/* Action hint: Always visible on Smiles Card for mobile clarity */}
               {isSmiles ? (
                 <span className="text-[9px] md:text-[10px] text-pink-600 font-bold mt-0.5 flex items-center gap-0.5 animate-pulse">
-                  <span>✨</span> Tap to send love
+                  <span>✨</span> Nhấn để gửi tim
                 </span>
               ) : (
                 <span className="text-[9px] text-pink-500 font-medium opacity-0 group-hover:opacity-100 transition-opacity mt-0.5 truncate max-w-full">

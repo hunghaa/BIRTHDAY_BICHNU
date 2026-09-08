@@ -107,12 +107,14 @@ function VideoCard({ item, isPlaying, onTogglePlay, photoLikes, toggleLike }) {
         <div className="mt-2.5 md:mt-3 flex flex-col w-full px-1 gap-1">
           <div className="flex items-center justify-between w-full">
             <div className="flex flex-col truncate pr-2">
-              <span className="text-[11px] md:text-xs text-[#231918] font-bold truncate">
+              <span className="text-xs md:text-sm text-[#231918] font-bold truncate">
                 {item.title}
               </span>
-              <span className="text-[9px] md:text-[10px] text-primary/80 font-medium truncate">
-                {item.tag}
-              </span>
+              {item.tag && (
+                <span className="text-[9px] md:text-[10px] text-primary/80 font-medium truncate">
+                  {item.tag}
+                </span>
+              )}
             </div>
 
             <button
@@ -210,12 +212,14 @@ export default function GallerySection() {
                 <div className="mt-2.5 md:mt-3 flex flex-col w-full px-1 gap-1">
                   <div className="flex items-center justify-between w-full">
                     <div className="flex flex-col truncate pr-2">
-                      <span className="text-[11px] md:text-xs text-[#231918] font-bold truncate">
+                      <span className="text-xs md:text-sm text-[#231918] font-bold truncate">
                         {item.title}
                       </span>
-                      <span className="text-[9px] md:text-[10px] text-primary/80 font-medium truncate">
-                        {item.tag}
-                      </span>
+                      {item.tag && (
+                        <span className="text-[9px] md:text-[10px] text-primary/80 font-medium truncate">
+                          {item.tag}
+                        </span>
+                      )}
                     </div>
 
                     <button

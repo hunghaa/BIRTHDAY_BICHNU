@@ -7,7 +7,7 @@ export default function CakeSection() {
   const [flameClass, setFlameClass] = useState('flame-active')
   const [showSmoke, setShowSmoke] = useState(false)
   const [message, setMessage] = useState({
-    text: '✨ Close your eyes, make a heartfelt wish, and tap the cake to blow out the candles! ✨',
+    text: '✨ Nhắm mắt lại, ước một điều thật đẹp và chạm vào bánh để thổi nến nha! ✨',
     isWishDone: false,
   })
 
@@ -46,7 +46,7 @@ export default function CakeSection() {
     }, 450)
 
     setMessage({
-      text: "✨ Bich Nu's 25th birthday wish has been sent to the stars! Wishing our dearest teacher endless radiance and boundless joy! 🌸💖",
+      text: '✨ Điều ước tuổi 25 của Bích Nụ đã được gửi tới các vì sao! Chúc Bích Nụ luôn vui vẻ và ngập tràn hạnh phúc! 🌸💖',
       isWishDone: true,
     })
 
@@ -84,7 +84,7 @@ export default function CakeSection() {
         {/* Section Pill Badge */}
         <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#ffd8e7] text-[#3d0026] text-[11px] font-bold mb-2 backdrop-blur-sm border border-pink-200/80 shadow-xs">
           <span className="material-symbols-outlined text-[14px] text-primary">magic_button</span>
-          <span>The 25th Birthday Wish Sanctuary</span>
+          <span>Góc Ước Nguyện Tuổi 25</span>
         </div>
 
        
@@ -94,7 +94,7 @@ export default function CakeSection() {
           className="relative w-full max-w-[320px] h-72 my-4 flex flex-col items-center justify-end float-cake cursor-pointer select-none"
           id="cake-container"
           onClick={handleCakeClick}
-          title={candlesLit ? 'Tap to blow out the candles & make a wish!' : 'Tap to relight the candles!'}
+          title={candlesLit ? 'Chạm vào bánh để thổi nến & ước nha!' : 'Chạm để thắp lại nến!'}
         >
           {/* Candles Container */}
           <div className="relative flex items-end justify-center gap-6 z-20 mb-[-4px]">
@@ -239,7 +239,7 @@ export default function CakeSection() {
               <span className="material-symbols-outlined text-[18px] text-amber-500">
                 local_fire_department
               </span>
-              <span>Relight Candles 🔥✨</span>
+              <span>Thắp lại nến 🔥✨</span>
             </button>
           </div>
         )}
@@ -247,7 +247,7 @@ export default function CakeSection() {
         {/* Footer Info Row */}
         <div className="mt-3 flex items-center justify-center w-full px-2 pt-2 border-t border-pink-100/70 text-[11px] text-tertiary">
           <span className="uppercase tracking-wider text-[9px] bg-pink-100/60 px-3 py-1 rounded-full text-secondary font-bold">
-            Bich Nu's 25th Birthday ✨
+            Sinh Nhật Tuổi 25 Của Bích Nụ ✨
           </span>
         </div>
 

@@ -15,27 +15,25 @@ export default function Footer() {
             />
           </div>
           <span className="font-syne text-base sm:text-lg text-primary font-bold">
-            Bich Nu • Nguyen Thi Cam Nguyet
+            Bích Nụ • Nguyễn Thị Cẩm Nguyệt
           </span>
         </div>
 
         {/* Dedicated text */}
         <p className="text-xs sm:text-sm text-[#594047] max-w-lg leading-relaxed px-2">
-          Commemorating milestone personal moments with tenderness, gentle blooms, and everlasting
-          sunshine. Born on September 8, 2001.
+          Lưu giữ những khoảnh khắc thanh xuân ngọt ngào và những kỷ niệm đáng nhớ. Sinh ngày 08 tháng 09 năm 2001.
         </p>
 
         {/* Wishes tagline */}
         <div className="flex items-center gap-2 pt-1">
           <span className="text-[10px] sm:text-xs text-tertiary uppercase tracking-widest font-semibold">
-            Sweetest Wishes &amp; Cloud Confetti • Forever Cherished 🌸
+            Gửi trọn những lời chúc mừng ngọt ngào nhất • Mãi vui vẻ nha 🌸
           </span>
         </div>
 
         {/* Copyright */}
         <div className="text-[#8d6f77] text-[10px] sm:text-xs pt-3 border-t border-pink-200/50 w-full max-w-md">
-          © 2025 Dedicated with unconditional love to Bich Nu (Cam Nguyet). All sweet memories
-          reserved.
+          © 2025 Dành tặng Bích Nụ (Cẩm Nguyệt) với tất cả sự trân trọng.
         </div>
       </div>
     </footer>

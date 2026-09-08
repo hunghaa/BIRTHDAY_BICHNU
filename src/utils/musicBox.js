@@ -5,9 +5,37 @@ class BirthdayMusicBox {
   constructor() {
     this.audio = null
     this.isPlaying = false
+    this.isMuted = false
+    this.volume = 0.2 // Default pleasant low volume
     this.onFinishCallback = null
     this.ctx = null
     this.timer = null
+    this.listeners = new Set()
+  }
+
+  subscribe(listener) {
+    this.listeners.add(listener)
+    // Trigger immediate update
+    try {
+      listener({
+        isPlaying: this.isPlaying,
+        isMuted: this.isMuted,
+        volume: this.volume,
+      })
+    } catch {}
+    return () => this.listeners.delete(listener)
+  }
+
+  notify() {
+    this.listeners.forEach((listener) => {
+      try {
+        listener({
+          isPlaying: this.isPlaying,
+          isMuted: this.isMuted,
+          volume: this.volume,
+        })
+      } catch {}
+    })
   }
 
   initAudio() {
@@ -15,10 +43,20 @@ class BirthdayMusicBox {
       try {
         this.audio = new Audio(birthdayAudioSrc)
         this.audio.loop = true
-        this.audio.volume = 0.4
+        this.audio.volume = this.isMuted ? 0 : this.volume
+        this.audio.muted = this.isMuted
         this.audio.addEventListener('ended', () => {
           this.isPlaying = false
+          this.notify()
           if (this.onFinishCallback) this.onFinishCallback()
+        })
+        this.audio.addEventListener('play', () => {
+          this.isPlaying = true
+          this.notify()
+        })
+        this.audio.addEventListener('pause', () => {
+          this.isPlaying = false
+          this.notify()
         })
       } catch (err) {
         console.warn('Audio init error, will use synth fallback:', err)
@@ -26,17 +64,66 @@ class BirthdayMusicBox {
     }
   }
 
+  setVolume(newVol) {
+    const clamped = Math.max(0, Math.min(1, parseFloat(newVol) || 0))
+    this.volume = clamped
+    if (clamped > 0 && this.isMuted) {
+      this.isMuted = false
+    }
+    if (this.audio) {
+      this.audio.muted = this.isMuted
+      this.audio.volume = this.isMuted ? 0 : this.volume
+    }
+    this.notify()
+  }
+
+  toggleMute() {
+    this.initAudio()
+    this.isMuted = !this.isMuted
+    if (this.audio) {
+      this.audio.muted = this.isMuted
+      this.audio.volume = this.isMuted ? 0 : this.volume
+    }
+    this.notify()
+    return this.isMuted
+  }
+
+  togglePlay() {
+    if (this.isPlaying) {
+      this.pause()
+    } else {
+      this.start()
+    }
+  }
+
+  pause() {
+    this.isPlaying = false
+    if (this.audio) {
+      try {
+        this.audio.pause()
+      } catch {}
+    }
+    if (this.ctx) {
+      try {
+        this.ctx.suspend()
+      } catch {}
+    }
+    this.notify()
+  }
+
   start(onFinish) {
     this.initAudio()
     this.onFinishCallback = onFinish
 
     if (this.audio) {
-      this.audio.currentTime = 0
+      this.audio.muted = this.isMuted
+      this.audio.volume = this.isMuted ? 0 : this.volume
       const playPromise = this.audio.play()
       if (playPromise !== undefined) {
         playPromise
           .then(() => {
             this.isPlaying = true
+            this.notify()
           })
           .catch((err) => {
             console.warn('HTML5 Audio autoplay restricted, falling back to synth tone:', err)
@@ -68,6 +155,7 @@ class BirthdayMusicBox {
       } catch {}
       this.ctx = null
     }
+    this.notify()
   }
 
   // Synthesizer fallback if mp3 blocked

@@ -40,7 +40,8 @@
   --color-outline: #8d6f77;
   --color-outline-variant: #e1bec6;
 
-  --font-syne: 'Syne', sans-serif;
+  --font-syne: 'Outfit', 'Plus Jakarta Sans', 'Nunito Sans', sans-serif;
+  --font-outfit: 'Outfit', sans-serif;
   --font-nunito: 'Nunito Sans', sans-serif;
 }
 
@@ -52,7 +53,7 @@
   }
 
   h1, h2, h3, h4, .font-syne {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Outfit', 'Plus Jakarta Sans', 'Nunito Sans', sans-serif;
   }
 }
 
