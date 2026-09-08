@@ -74,3 +74,54 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: #db2777;
 }
+
+/* Custom Birthday Surprise Gate Animations */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(2deg); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 25px rgba(219,39,119,0.35), 0 0 50px rgba(252,121,189,0.25); }
+  50% { box-shadow: 0 0 45px rgba(219,39,119,0.6), 0 0 80px rgba(252,121,189,0.45); }
+}
+
+@keyframes shimmerPass {
+  0% { transform: translateX(-120%) skewX(-20deg); }
+  100% { transform: translateX(220%) skewX(-20deg); }
+}
+
+@keyframes sparkleTwinkle {
+  0% { opacity: 0.2; transform: scale(0.8) rotate(0deg); }
+  100% { opacity: 1; transform: scale(1.2) rotate(180deg); }
+}
+
+.animate-float-slow {
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2.5s ease-in-out infinite;
+}
+
+.shimmer-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-effect::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.65), transparent);
+  animation: shimmerPass 3.5s infinite;
+}
+
+.magical-sparkle {
+  position: absolute;
+  pointer-events: none;
+  animation: sparkleTwinkle 2.5s ease-in-out infinite alternate;
+}

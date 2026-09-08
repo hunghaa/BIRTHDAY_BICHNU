@@ -6,7 +6,7 @@ export const galleryPhotos = [
     title: 'Bich Nu • Classroom Radiance',
     icon: 'favorite',
     tag: 'Teacher Glow',
-    wish: 'Nụ cười rạng rỡ của cô giáo Bích Nữ trên bục giảng luôn thắp sáng niềm say mê học tập của học trò!',
+    wish: "Bich Nu's radiant smile in the classroom illuminates her students' passion for learning every single day!",
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ export const galleryPhotos = [
     title: 'Warm Autumn • Cafe Serenity',
     icon: 'local_cafe',
     tag: 'Cozy Afternoon',
-    wish: 'Những buổi chiều thu êm dịu bên tách cà phê ấm, bình yên và ngọt ngào như chính con người Bích Nữ.',
+    wish: 'Peaceful autumn afternoons with warm coffee, gentle and sweet just like Bich Nu herself.',
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ export const galleryPhotos = [
     title: 'Birthday Wish • Sweet Milestone',
     icon: 'cake',
     tag: 'Age 24',
-    wish: 'Tuổi 24 rực rỡ, đón nhận muôn vàn may mắn, hạnh phúc đong đầy và nụ cười luôn nở trên môi.',
+    wish: 'A radiant 24th year, welcoming endless luck, boundless joy, and everlasting smiles.',
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ export const galleryPhotos = [
     title: 'Mentorship • Heartfelt Wisdom',
     icon: 'auto_awesome',
     tag: 'Inspiration',
-    wish: 'Sự tận tụy, dịu dàng và nhiệt huyết là ngọn hải đăng truyền cảm hứng cho biết bao thế hệ.',
+    wish: 'Devotion, kindness, and vibrant passion that serve as an inspiring beacon for every generation.',
   },
   {
     id: 5,
@@ -42,7 +42,7 @@ export const galleryPhotos = [
     title: 'Friends & Blooms • Pure Joy',
     icon: 'filter_vintage',
     tag: 'Sweet Moments',
-    wish: 'Tình bạn ngát hương hoa, rộn rã tiếng cười trong trẻo bên những người thân yêu nhất.',
+    wish: 'Sweet fragrant blooms and pure, cheerful laughter shared alongside dearest friends.',
   },
   {
     id: 6,
@@ -51,6 +51,6 @@ export const galleryPhotos = [
     title: 'Wanderlust • Golden Horizons',
     icon: 'photo_camera',
     tag: 'New Horizons',
-    wish: 'Chúc Bích Nữ khám phá thêm nhiều chân trời mới, tự do, xinh đẹp và tỏa sáng rực rỡ!',
+    wish: 'Wishing Bich Nu to explore enchanting new horizons, free, beautiful, and forever radiant!',
   },
 ]

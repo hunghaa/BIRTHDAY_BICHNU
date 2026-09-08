@@ -15,7 +15,7 @@ export default function Footer() {
             />
           </div>
           <span className="font-syne text-base sm:text-lg text-primary font-bold">
-            Bich Nu • Nguyễn Thị Cẩm Nguyệt
+            Bich Nu • Nguyen Thi Cam Nguyet
           </span>
         </div>
 
@@ -34,7 +34,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="text-[#8d6f77] text-[10px] sm:text-xs pt-3 border-t border-pink-200/50 w-full max-w-md">
-          © 2025 Dedicated with unconditional love to Bich Nu (Cẩm Nguyệt). All sweet memories
+          © 2025 Dedicated with unconditional love to Bich Nu (Cam Nguyet). All sweet memories
           reserved.
         </div>
       </div>

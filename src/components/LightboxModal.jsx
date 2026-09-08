@@ -35,6 +35,7 @@ export default function LightboxModal({ photo, onClose, onNext, onPrev }) {
           <button
             onClick={onClose}
             className="w-8 h-8 rounded-full bg-white text-secondary hover:text-primary hover:bg-pink-100 flex items-center justify-center transition-all shadow-sm"
+            title="Close"
           >
             <span className="material-symbols-outlined text-lg">close</span>
           </button>
@@ -52,7 +53,7 @@ export default function LightboxModal({ photo, onClose, onNext, onPrev }) {
           <button
             onClick={onPrev}
             className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 hover:bg-white text-primary flex items-center justify-center shadow-lg transition-all active:scale-95"
-            title="Ảnh trước"
+            title="Previous photo"
           >
             <span className="material-symbols-outlined text-xl">arrow_back</span>
           </button>
@@ -60,7 +61,7 @@ export default function LightboxModal({ photo, onClose, onNext, onPrev }) {
           <button
             onClick={onNext}
             className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 hover:bg-white text-primary flex items-center justify-center shadow-lg transition-all active:scale-95"
-            title="Ảnh kế tiếp"
+            title="Next photo"
           >
             <span className="material-symbols-outlined text-xl">arrow_forward</span>
           </button>
@@ -78,7 +79,7 @@ export default function LightboxModal({ photo, onClose, onNext, onPrev }) {
               className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-pink-50 hover:bg-pink-100 text-primary text-xs font-bold transition-all border border-pink-200"
             >
               <span className="material-symbols-outlined text-base text-pink-600">favorite</span>
-              <span>Yêu thích ❤️</span>
+              <span>Love ❤️</span>
             </button>
           </div>
 

@@ -5,6 +5,8 @@ import LetterSection from './components/LetterSection'
 import GallerySection from './components/GallerySection'
 import Footer from './components/Footer'
 import LightboxModal from './components/LightboxModal'
+import SecretEntrance from './components/SecretEntrance'
+import { musicBox } from './utils/musicBox'
 import { galleryPhotos } from './data/galleryData'
 
 export default function App() {
@@ -48,8 +50,16 @@ export default function App() {
     setSelectedPhoto(galleryPhotos[prevIndex])
   }
 
+  const handleOpenSurprise = () => {
+    // Automatically play sweet birthday music box melody upon unwrapping
+    musicBox.start()
+  }
+
   return (
     <div className="relative min-h-screen bg-[#fff8f7] text-[#231918] selection:bg-[#ffd8e7] selection:text-[#3d0026] overflow-x-hidden font-nunito">
+      {/* Birthday Surprise Gate with Particle & Confetti Fireworks System */}
+      <SecretEntrance onOpen={handleOpenSurprise} />
+
       {/* Background Ambient Glows */}
       <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
         <div className="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-[#ffb1c7]/30 blur-3xl"></div>
@@ -57,7 +67,7 @@ export default function App() {
         <div className="absolute bottom-10 left-1/4 w-80 h-80 rounded-full bg-[#ffd8ed]/30 blur-3xl"></div>
       </div>
 
-      {/* Navigation Header (Tự thích ứng cả Mobile và Desktop) */}
+      {/* Navigation Header (Adaptive for Mobile and Desktop) */}
       <Navbar activeSection={activeSection} />
 
       {/* Main Content Sections */}
@@ -70,7 +80,7 @@ export default function App() {
       {/* Footer */}
       <Footer />
 
-      {/* Lightbox Modal khi bấm vào ảnh */}
+      {/* Lightbox Modal */}
       {selectedPhoto && (
         <LightboxModal
           photo={selectedPhoto}
