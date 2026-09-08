@@ -104,35 +104,43 @@ function VideoCard({ item, isPlaying, onTogglePlay, photoLikes, toggleLike }) {
         </div>
 
         {/* Caption Row */}
-        <div className="mt-2.5 md:mt-3 flex items-center justify-between w-full px-1">
-          <div className="flex flex-col truncate pr-2">
-            <span className="text-[11px] md:text-xs text-[#231918] font-bold truncate">
-              {item.title}
-            </span>
-            <span className="text-[9px] md:text-[10px] text-primary/80 font-medium truncate">
-              {item.tag}
-            </span>
+        <div className="mt-2.5 md:mt-3 flex flex-col w-full px-1 gap-1">
+          <div className="flex items-center justify-between w-full">
+            <div className="flex flex-col truncate pr-2">
+              <span className="text-[11px] md:text-xs text-[#231918] font-bold truncate">
+                {item.title}
+              </span>
+              <span className="text-[9px] md:text-[10px] text-primary/80 font-medium truncate">
+                {item.tag}
+              </span>
+            </div>
+
+            <button
+              onClick={(e) => toggleLike(e, item.id)}
+              className="flex items-center gap-1 text-primary hover:scale-110 active:scale-95 transition-transform shrink-0 px-2 py-1 rounded-full hover:bg-pink-50 cursor-pointer"
+              title="Thả tim khoảnh khắc này"
+            >
+              <span className="material-symbols-outlined text-[16px] md:text-[18px]">
+                {item.icon || 'favorite'}
+              </span>
+              {photoLikes[item.id] ? (
+                <span className="text-[10px] font-bold">{photoLikes[item.id]}</span>
+              ) : null}
+            </button>
           </div>
 
-          <button
-            onClick={(e) => toggleLike(e, item.id)}
-            className="flex items-center gap-1 text-primary hover:scale-110 active:scale-95 transition-transform shrink-0 px-2 py-1 rounded-full hover:bg-pink-50 cursor-pointer"
-            title="Thả tim khoảnh khắc này"
-          >
-            <span className="material-symbols-outlined text-[16px] md:text-[18px]">
-              {item.icon || 'favorite'}
-            </span>
-            {photoLikes[item.id] ? (
-              <span className="text-[10px] font-bold">{photoLikes[item.id]}</span>
-            ) : null}
-          </button>
+          {item.wish && (
+            <p className="text-[10px] sm:text-[11px] text-[#594047]/85 leading-relaxed italic border-t border-pink-100/70 pt-1 mt-0.5">
+              "{item.wish}"
+            </p>
+          )}
         </div>
       </div>
     </div>
   )
 }
 
-export default function GallerySection({ onSelectPhoto }) {
+export default function GallerySection() {
   const [photoLikes, setPhotoLikes] = useState({})
   const [playingVideoId, setPlayingVideoId] = useState(null)
 
@@ -178,8 +186,7 @@ export default function GallerySection({ onSelectPhoto }) {
           return (
             <div
               key={item.id}
-              onClick={() => onSelectPhoto(item)}
-              className="group relative rounded-xl md:rounded-2xl bg-white p-3 md:p-5 border-2 md:border-4 border-[#e9cfce] shadow-[0_12px_24px_rgba(219,39,119,0.14)] hover:shadow-[0_20px_60px_-15px_rgba(219,39,119,0.25)] hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center cursor-pointer pt-4 md:pt-6"
+              className="group relative rounded-xl md:rounded-2xl bg-white p-3 md:p-5 border-2 md:border-4 border-[#e9cfce] shadow-[0_12px_24px_rgba(219,39,119,0.14)] hover:shadow-[0_20px_60px_-15px_rgba(219,39,119,0.25)] hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center pt-4 md:pt-6"
             >
               {/* Hanging Pushpin Badge */}
               <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-20 flex items-center justify-center pointer-events-none">
@@ -197,39 +204,39 @@ export default function GallerySection({ onSelectPhoto }) {
                     src={item.image}
                     loading="lazy"
                   />
-
-                  {/* Hover overlay hint */}
-                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
-                    <span className="px-3 py-1.5 rounded-full bg-white/95 text-primary text-xs font-bold shadow-md flex items-center gap-1.5">
-                      <span className="material-symbols-outlined text-sm">zoom_in</span>
-                      Xem Chi Tiết
-                    </span>
-                  </div>
                 </div>
 
                 {/* Caption Row */}
-                <div className="mt-2.5 md:mt-3 flex items-center justify-between w-full px-1">
-                  <div className="flex flex-col truncate pr-2">
-                    <span className="text-[11px] md:text-xs text-[#231918] font-bold truncate">
-                      {item.title}
-                    </span>
-                    <span className="text-[9px] md:text-[10px] text-primary/80 font-medium truncate">
-                      {item.tag}
-                    </span>
+                <div className="mt-2.5 md:mt-3 flex flex-col w-full px-1 gap-1">
+                  <div className="flex items-center justify-between w-full">
+                    <div className="flex flex-col truncate pr-2">
+                      <span className="text-[11px] md:text-xs text-[#231918] font-bold truncate">
+                        {item.title}
+                      </span>
+                      <span className="text-[9px] md:text-[10px] text-primary/80 font-medium truncate">
+                        {item.tag}
+                      </span>
+                    </div>
+
+                    <button
+                      onClick={(e) => toggleLike(e, item.id)}
+                      className="flex items-center gap-1 text-primary hover:scale-110 active:scale-95 transition-transform shrink-0 px-2 py-1 rounded-full hover:bg-pink-50 cursor-pointer"
+                      title="Thả tim khoảnh khắc này"
+                    >
+                      <span className="material-symbols-outlined text-[16px] md:text-[18px]">
+                        {item.icon || 'favorite'}
+                      </span>
+                      {photoLikes[item.id] ? (
+                        <span className="text-[10px] font-bold">{photoLikes[item.id]}</span>
+                      ) : null}
+                    </button>
                   </div>
 
-                  <button
-                    onClick={(e) => toggleLike(e, item.id)}
-                    className="flex items-center gap-1 text-primary hover:scale-110 active:scale-95 transition-transform shrink-0 px-2 py-1 rounded-full hover:bg-pink-50 cursor-pointer"
-                    title="Thả tim khoảnh khắc này"
-                  >
-                    <span className="material-symbols-outlined text-[16px] md:text-[18px]">
-                      {item.icon || 'favorite'}
-                    </span>
-                    {photoLikes[item.id] ? (
-                      <span className="text-[10px] font-bold">{photoLikes[item.id]}</span>
-                    ) : null}
-                  </button>
+                  {item.wish && (
+                    <p className="text-[10px] sm:text-[11px] text-[#594047]/85 leading-relaxed italic border-t border-pink-100/70 pt-1 mt-0.5">
+                      "{item.wish}"
+                    </p>
+                  )}
                 </div>
               </div>
             </div>

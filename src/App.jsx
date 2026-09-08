@@ -5,14 +5,11 @@ import CakeSection from './components/CakeSection'
 import LetterSection from './components/LetterSection'
 import GallerySection from './components/GallerySection'
 import Footer from './components/Footer'
-import LightboxModal from './components/LightboxModal'
 import SecretEntrance from './components/SecretEntrance'
 import { musicBox } from './utils/musicBox'
-import { galleryPhotos } from './data/galleryData'
 
 export default function App() {
   const [activeSection, setActiveSection] = useState('celebration')
-  const [selectedPhoto, setSelectedPhoto] = useState(null)
 
   // Track active section on scroll
   useEffect(() => {
@@ -39,25 +36,6 @@ export default function App() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // Lightbox Next/Prev Handlers (photos only)
-  const imagePhotos = galleryPhotos.filter((p) => p.type !== 'video')
-
-  const handleNextPhoto = () => {
-    if (!selectedPhoto) return
-    const currentIndex = imagePhotos.findIndex((p) => p.id === selectedPhoto.id)
-    if (currentIndex === -1) return
-    const nextIndex = (currentIndex + 1) % imagePhotos.length
-    setSelectedPhoto(imagePhotos[nextIndex])
-  }
-
-  const handlePrevPhoto = () => {
-    if (!selectedPhoto) return
-    const currentIndex = imagePhotos.findIndex((p) => p.id === selectedPhoto.id)
-    if (currentIndex === -1) return
-    const prevIndex = (currentIndex - 1 + imagePhotos.length) % imagePhotos.length
-    setSelectedPhoto(imagePhotos[prevIndex])
-  }
-
   const handleOpenSurprise = () => {
     // Automatically play sweet birthday music box melody upon unwrapping
     musicBox.start()
@@ -83,21 +61,11 @@ export default function App() {
         <HeroSection />
         <CakeSection />
         <LetterSection />
-        <GallerySection onSelectPhoto={(photo) => setSelectedPhoto(photo)} />
+        <GallerySection />
       </main>
 
       {/* Footer */}
       <Footer />
-
-      {/* Lightbox Modal */}
-      {selectedPhoto && (
-        <LightboxModal
-          photo={selectedPhoto}
-          onClose={() => setSelectedPhoto(null)}
-          onNext={handleNextPhoto}
-          onPrev={handlePrevPhoto}
-        />
-      )}
     </div>
   )
 }
